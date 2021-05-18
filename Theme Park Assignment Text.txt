@@ -1,0 +1,39 @@
+﻿Third-Party Website Analysis:
+
+
+Nintendo World JP Site Analysis:  Intro page has a top frame that follows the page with five options -- Content of page includes image-frames for these options and a bottom frame for more specific and official information such as contacting the venue, copyright information, social media share links, and language options.  Each of the options in the top frame is a drop-down menu that links to a sub-page with image frames for details about specific attractions/events/etc.
+
+
+Knott's Berry Farm Site Analysis:  Intro page has top frame with four options -- Tickets, Hotels, Rides, Park Info -- as well as hours and a shopping cart widget.  The rest of the intro page has a central graphic followed by image frame links to subsections of the website, and the bottom of the page has more detailed text links and social media share buttons.  The rides page has a search filter to sort rides by height and other details, while the hotels and other suboptions are divided into subpages.  All sites have a pop-up overlay about COVID safety.
+
+
+Legoland DXB Analysis: Main page has a very thin top frame that includes timings, a link to available jobs, a contact page link, and a search bar. Another, larger, banner-like frame just underneath includes the logo, and links to tickets/passes, the corresponding hotel, an explore page, a “plan your day” page, and a button to book tickets. Beneath this, there is a large, brightly coloured image advertising attractions and exclusive offers. There are left and right arrows on each side of the image allowing you to see more. There are three images total which rotate intermittently. Scrolling down, there are four frames arranged in a horizontal row advertising various features of the park, each with respective “learn more” buttons. Scrolling down further reveals further advertisements for various aspects of the park, such as features, events, and sales. Underneath this are photographs of people at the park who posted their pictures using a park-specific hashtag. There is then an option to sign up to their newsletter and finally a frame at the bottom including things like privacy policies, an about page, and visitor information. 
+
+
+Universal Studios OR: Topmost banner provides covid safety regulations with a link to more information. Directly underneath this is a frame including the logo, a shopping cart, a search bar, and an icon to display a side menu, which includes things like park hours, safety guidelines, things to do, tickets packages, and places to stay. The main frame is taken up by a large image displaying attractions which scrolls through three distinct images. Underneath this is a bar with various buttons for ticketing, deals, hotels, passes, and packages. Further down there are frames advertising special offers. Beneath this are three more smaller frames, all headed by “Explore Our Parks”. Each smaller frame describes a different park, with relevant timings and attractions. Beneath that still is another banner with the weather, park hours, directions, parking and maps. There is another frame including places to stay, a repetition of the previous banner that included ticketing, deals, hotels, passes and packages. Finally there is a signup option to the park’s newsletter and then various smaller links at the bottom including corporate information, signups for large events, media relations, merchandise etc. 
+
+
+Tokyo Disney Sea: Home page has a nav-bar with tabbed browsing format. The different tabs include Favorites, Calendar, Ticketing, Special Events and offers, Merchandise shop, Accessibility for differently abled people and Maps. Most of the home page is covered by a hero section which scrolls through images of the major attractions. Below the hero section the tabs are again listed as links for ease of navigation.  The tickets page contains information regarding availability and pricing, instructions on how to purchase, and a purchase tickets button. The attractions page lists all the rides and activities that the park provides, with a filter/search sidebar. Each element in the attractions list has an image and a small description. The merchandise tab provides an online store for purchasing park-related gear.  The accessibility tab contains information regarding services provided by the park for differently-abled people.
+
+
+Conclusions: Our site needs a frame at the top of the site to link to the major subsections, a frame at the bottom with text links and specific details as well as social media buttons.  Our sub-pages should have added functionality specific to their content.  It seems appropriate sub-headings include: Ticketing, Attractions, Hotels, and there should be contact information as well as some kind of COVID disclaimer.  The tabbed browsing format is refreshing as it loads up the clicked page without reloading the whole page, which seems like a more user-friendly and intuitive interface. It could be one of the features we incorporate in our project, or we could think of a way to innovate on the tabs format.
+
+
+
+
+Structure of the Website:
+
+The amusement park will be Computer Science themed.
+
+
+The theme park website structure that we’ve come up with contains three pages at the moment. They are:
+
+
+1. Home Page
+2. Attractions Page
+3. Ticketing page
+
+
+
+
+The structure may be represented with a diagram as under:
