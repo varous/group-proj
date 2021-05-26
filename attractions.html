@@ -24,6 +24,59 @@
     </nav>
 </div>
 
+<!-- Slider for ride height -->
+<div class = "slider-metric" id="slider-metric" style="display:block">
+    <input type="range" id="height-metric" name="height" list="tickmarks" min="90" max="150">
+    <datalist id="tickmarks">
+        <option value="90" label="90 cm"></option>
+        <option value="95"></option>
+        <option value="100" label="100 cm"></option>
+        <option value="105"></option>
+        <option value="110" label="110 cm"></option>
+        <option value="115"></option>
+        <option value="120" label="120 cm"></option>
+        <option value="125"></option>
+        <option value="130" label="130 cm"></option>
+        <option value="135"></option>
+        <option value="140" label="140 cm"></option>
+        <option value="145"></option>
+        <option value="150" label='150 cm+'></option>
+    </datalist>
+</div>
+
+<div class = "slider-imperial" id="slider-imperial" style="display:none">
+    <h4>Imperial Slider</h4>
+    <input type="range" id="height-imperial" name="height" list="tickmarks" min="91" max="152">
+    <datalist id="tickmarks">
+        <option value="91" label='3&#39;'></option>
+        <option value="95"></option>
+        <option value="100" label='3&#39;4"'></option>
+        <option value="105"></option>
+        <option value="110" label='3&#39;8"'></option>
+        <option value="115"></option>
+        <option value="120" label='4&#39;'></option>
+        <option value="125"></option>
+        <option value="130" label='4&#39;4"'></option>
+        <option value="135"></option>
+        <option value="140" label='4&#39;8"'></option>
+        <option value="145"></option>
+        <option value="152" label='5&#39;+'></option>
+    </datalist>
+</div>
+
+<!-- Script for switching between metric/imperial based on browser language -->
+<script>
+    const lang = navigator.language;
+    var imperial = false;
+
+    if (/^en-US\b/.test(lang)){
+        imperial = true;
+        console.log("true");
+        document.getElementById("slider-imperial").style.display = "block";
+        document.getElementById("slider-metric").style.display = "none";
+    }
+</script>
+
 <!-- Image carousel/slide show -->
 
 <div class="slideshow-container">
