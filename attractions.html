@@ -14,18 +14,41 @@
         <title>CS Park Attractions</title>
     </head>
     <body>
-<header>Attractions</header>
 
-<!-- Navigation bar. This may be copied and edited into other pages -->
-<div class = "nav-container">
-    <nav>
-        <a href = "index.html">Home</a>
-        <a href = "ticketing.html">Ticketing</a>
-    </nav>
-</div>
+
+<!-- Header that includes links to other pages. This may be copied and pasted in other pages. -->
+<header class="header">
+    <div class="container" id="header-data-container">
+        <div id="logo">
+            <!--Image tag for the logo, which is a link to index.html-->
+            <a href="/index.html">Logo</a>
+        </div>
+        <div id="Hours">
+            <table id="opening-hours">
+                <tr>
+                    <th><b>Monday to Friday</b></th>
+                    <td>9am - 7pm</td>
+                </tr>
+                <tr>
+                    <th><b>Saturday and Sunday</b></th>
+                    <td>9am - 9pm</td>
+                </tr>
+            </table>
+        </div>
+        <div class="headerbutton" id="explorebutton">
+            <a href="/attractions.html"><button type="button">Explore Attractions</button></a>
+        </div>
+        <div class="headerbutton" id="ticketsbutton">
+            <a href="/ticketing.html"><button type="button">Tickets/Passes</button></a>
+        </div>
+    </div>
+</header>
+
+<h2 class="pagetitle">Attractions</h2>
 
 <!-- Slider for ride height -->
 <div class = "slider-metric" style="display:block" id="slider-metric">
+    <p>Filter by minimum height: </p>
     <input type="range" id="height" name="height" list="tickmarks" min="90" max="150">
     <datalist id="tickmarks">
         <option value="90" label="90 cm"></option>
@@ -45,6 +68,7 @@
 </div>
 
 <div class = "slider-imperial" style="display:none">
+    <p>Filter by minimum height: </p>
     <input type="range" id="height" name="height" list="tickmarks" min="91" max="152">
     <datalist id="tickmarks">
         <option value="91" label='3&#39;'></option>
@@ -73,7 +97,19 @@
     }
 </script>
 
+<div class="container" id="attractions">
+    <div class="attraction" id="at1">
+        <!-- Name of attraction, image of attraction and a brief description-->
+    </div>
 
+    <div class="attraction" id="at2">
+        <!-- Name of attraction, image of attraction and a brief description-->
+    </div>
+
+    <div class="attraction" id="at3">
+        <!-- Name of attraction, image of attraction and a brief description-->
+    </div>
+</div>
   
 <footer class = "footer">
     <div class = "container" id = "footer-data-container"></div>
