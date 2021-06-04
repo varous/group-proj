@@ -21,6 +21,7 @@
                     <!--Image tag for the logo, which is a link to index.html-->
                     <a href="/index.html">Logo</a>
                 </div>
+                <!-- Container for table that shows business hours -->
                 <div id="Hours">
                     <table id="opening-hours">
                         <tr>
@@ -33,6 +34,7 @@
                         </tr>
                     </table>
                 </div>
+                <!-- Container includes links to attractions page and ticketing page -->
                 <div class="headerbutton" id="explorebutton">
                     <a href="/attractions.html"><button type="button">Explore Attractions</button></a>
                 </div>
@@ -45,6 +47,8 @@
         <h2 class="pagetitle">Attractions</h2>
         
         <!-- Slider for ride height -->
+        <!-- Filters attractions by height input taken from visitor -->
+        <!-- Slider for metric system -->
         <div class = "slider-metric" style="display:block" id="slider-metric">
             <p>Filter by minimum height: </p>
             <input type="range" id="height" name="height" list="tickmarks" min="90" max="150">
@@ -64,7 +68,7 @@
                 <option value="150" label='150 cm+'></option>
             </datalist>
         </div>
-        
+        <!-- Slider for imperial system -->
         <div class = "slider-imperial" style="display:none">
             <p>Filter by minimum height: </p>
             <input type="range" id="height" name="height" list="tickmarks" min="91" max="152">
