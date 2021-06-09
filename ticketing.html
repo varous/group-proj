@@ -35,10 +35,10 @@
                 </div>
                 <!-- Container includes links to attractions page and ticketing page -->
                 <div class="headerbutton" id="explorebutton">
-                    <a href="/attractions.html"><button type="button">Explore Attractions</button></a>
+                    <a class="Button" href="/attractions.html">Explore Attractions</a>
                 </div>
                 <div class="headerbutton" id="ticketsbutton">
-                    <a href="/ticketing.html"><button type="button">Tickets/Passes</button></a>
+                    <a class="Button" href="/ticketing.html">Tickets/Passes</a>
                 </div>
             </div>
         </header>
@@ -50,75 +50,72 @@
         <div id="daypass">
             <div class="ticketSection">
                 <h3>Day Passes</h3>
-                <h4>$19.99</h4>
             </div>
             <div id="daypasstext">
                 <p>Grants one full day of park access</p>
             </div>
             <div class="dropdown">
-                <button onclick="dropFunction()" class="dropbtn">Includes:</button>
+                <button onclick="dropFunction()" class="dropbtn">Learn more:</button>
                 <div id="dayDropdown" class="dayDropdownContent">
                     <ul>
-                        <li>Access to all parks</li>
-                        <li>Entrance to rides</li>
-                        <li>Something else</li>
-                        <li>Another thing</li>
+                        <li>Entrance to all park areas</li>
+                        <li>Access to standard rides</li>
+                        <li>Eligible to select visit date in advance</li>
+                        <li>Easy upgrade to Weekend or Season pass</li>
                     </ul>
                 </div>
             </div>
             <div class="passpurchase">
-                <a href="purchase_page.html">Purchase</a>
+                <button class="btn purchase">Purchase for only $19.99!</button>
             </div>
         </div>
         <!-- Container for ticket Category 2: Weekend Pass -->
         <div id="wkndpass">
             <div class="ticketSection">
                 <h3>Weekend Passes</h3>
-                <h4>$34.99</h4>
             </div>
             <div id="wkndpasstext">
                 <p>Grants 48 hours of park access</p>
             </div>
             <div class="dropdown">
-                <button onclick="dropFunction()" class="dropbtn">Includes:</button>
+                <button onclick="dropFunction()" class="dropbtn">Learn more:</button>
                 <div id="wkndDropdown" class="wkndDropdownContent">
                     <ul>
-                        <li>Access to all parks</li>
-                        <li>Entrance to rides</li>
-                        <li>Something else</li>
-                        <li>Another thing</li>
-                        <li>sommmeething else</li>
+                        <li>Entrance to all park areas</li>
+                        <li>Access to all rides</li>
+                        <li>Up to 10% off on select giftshop purchases</li>
+                        <li>Free entry gift for children 10 and under</li>
+                        <li>Easy upgrade to Season Pass</li>
                     </ul>
                 </div>
             </div>
             <div class="passpurchase">
-                <a href="purchase_page.html">Purchase</a>
+                <button class="btn purchase">Purchase for only $34.99!</button>
             </div>
         </div>
         <!-- Container for ticket Category 3: Season Pass -->
         <div id="sznpass">
             <div class="ticketSection">
                 <h3>Season Passes</h3>
-                <h4>$99.99</h4>
             </div>
             <div id="sznpasstext">
                 <p>Grants unlimited access to the park for 3 months</p>
             </div>
             <div class="dropdown">
-                <button onclick="dropFunction()" class="dropbtn">Includes:</button>
-                <div id="dayDropdown" class="dayDropdownContent">
+                <button onclick="dropFunction()" class="dropbtn">Learn more:</button>
+                <div id="seasonDropdown" class="seasonDropdownContent">
                     <ul>
-                    <li>Access to all parks</li>
-                    <li>Entrance to rides</li>
-                    <li>Something else</li>
-                    <li>Another thing</li>
-                    <li>Some reason to buy this pass</li>
-                    <li>lowkey u kinda save a lot tho</li>
+                    <li>Unlimited visits for the whole 2021 Season!</li>
+                    <li>Entrance to all park areas</li>
+                    <li>Access to exclusive rides</li>
+                    <li>Discounted meal at select in-park eateries</li>
+                    <li>FastTrack access to rides - no more queues!</li>
+                    <li>Exclusive summer deals to Season Pass holders only!</li>
                     </ul>
                 </div>
             </div>
             <div class="passpurchase">
-                <a href="purchase_page.html">Purchase</a>
+                <button class="btn purchase">Purchase for only $99.99!</button>
             </div>
         </div>
         <!-- Container for footer -->
@@ -142,11 +139,11 @@
                     <h6>Terms of Use</h6>
                     <h6>Privacy Policy</h6>
                 </div>
-                <div class = "col" id = "footer-col-social">
-                    <img src = "/assets/f_logo.png" href = "" alt = "facebook logo" height = 50 width = 50>
-                    <img src = "/assets/ig_logo.png" href = "" alt = "instagram logo" height = 50 width = 50>
-                    <img src = "/assets/t_logo.png" href = "" alt = "twitter logo" height = 50 width = 50>
-                </div>
+         <div class = "col" id = "footer-col-social">
+          <a href=""><img src = "/assets/f_logo.png" alt = "facebook logo" height = 50 width = 50></a>
+          <a href=""><img src = "/assets/ig_logo.png" alt = "instagram logo" height = 50 width = 50></a>
+          <a href=""><img src = "/assets/t_logo.png" alt = "twitter logo" height = 50 width = 50></a>
+        </div>
             </div>
         </footer>
     </body>
