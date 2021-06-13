@@ -1,0 +1,17 @@
+{
+    "color1": "#FCE786", 
+    "color1Comments": "light yellow",
+    
+    "color2": "#E67235",
+    "color2Comments": "saffron",
+    
+    "color3": "#D22D16",
+    "color3Comments": "not too bright red, least preferable of the 5 for accessibility issues",
+    
+    "color4": "#77BFE2",
+    "color4Comments": "light blue, option for background fills or banner main color",
+    
+    "color5": "#36A1D4",
+    "color5Comments": "sky blue, option for main color, if not then shadows and text color on white backgrounds"
+    
+}
