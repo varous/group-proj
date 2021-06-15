@@ -6,7 +6,7 @@ p {
     font-family: 'Ubuntu', sans-serif;
 }
 
-.button {
+.button, .dropbtn, .btnpurchase {
     background-color: #E67235;
     color: black;
     padding: 10px 10px;
