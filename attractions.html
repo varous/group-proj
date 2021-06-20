@@ -1,165 +1,229 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="robots" content="all" />
+        <meta name="creator" content="cm1040 Team 56" />
+        <meta name="audience" content="cm1040 students" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="This is the attractions page an imaginary Computer-Science-themed amusement park with tables describing different rides."
+        />
+        <meta
+            name="keywords"
+            content="Amusement Park, Computer Science, CS Park, Attractions"
+        />
+        <!--will fill out base href once i understand directory structure of project-->
+        <base href="" target="_blank" />
+        <link rel="stylesheet" href="/styles.css" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Ubuntu:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <title>CS Park Attractions</title>
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="robots" content="all">
-    <meta name="creator" content="cm1040 Team 56">
-    <meta name="audience" content="cm1040 students">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="This is the attractions page an imaginary Computer-Science-themed amusement park with tables describing different rides.">
-    <meta name="keywords" content="Amusement Park, Computer Science, CS Park, Attractions">
-    <!--will fill out base href once i understand directory structure of project-->
-    <base href="" target="_blank">
-    <link rel="stylesheet" href="/styles.css" type="text/css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <title>CS Park Attractions</title>
-</head>
-
-<body>
-    <!-- Header that includes links to other pages. This may be copied and pasted in other pages. -->
-    <header class="header">
-        <div class="container" id="header-data-container">
-            <div id="logo">
-                <!--Image tag for the logo, which is a link to index.html-->
-                <a href="/index.html">Logo</a>
+    <body>
+        <!-- Header that includes links to other pages. This may be copied and pasted in other pages. -->
+        <header class="header">
+            <div class="container" id="header-data-container">
+                <div id="logo">
+                    <!--Image tag for the logo, which is a link to index.html-->
+                    <a href="/index.html">Logo</a>
+                </div>
+                <!-- Container for table that shows business hours -->
+                <div id="Hours">
+                    <table id="opening-hours">
+                        <tr>
+                            <th><b>Monday to Friday</b></th>
+                            <td>9am - 7pm</td>
+                        </tr>
+                        <tr>
+                            <th><b>Saturday and Sunday</b></th>
+                            <td>9am - 9pm</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- Container includes links to attractions page and ticketing page -->
+                <div class="headerbutton" id="explorebutton">
+                    <a class="button" href="/attractions.html"
+                        >Explore Attractions</a
+                    >
+                </div>
+                <div class="headerbutton" id="ticketsbutton">
+                    <a class="button" href="/ticketing.html">Tickets/Passes</a>
+                </div>
             </div>
-            <!-- Container for table that shows business hours -->
-            <div id="Hours">
-                <table id="opening-hours">
-                    <tr>
-                        <th><b>Monday to Friday</b></th>
-                        <td>9am - 7pm</td>
-                    </tr>
-                    <tr>
-                        <th><b>Saturday and Sunday</b></th>
-                        <td>9am - 9pm</td>
-                    </tr>
-                </table>
-            </div>
-            <!-- Container includes links to attractions page and ticketing page -->
-            <div class="headerbutton" id="explorebutton">
-                <a class="button" href="/attractions.html">Explore Attractions</a>
-            </div>
-            <div class="headerbutton" id="ticketsbutton">
-                <a class="button" href="/ticketing.html">Tickets/Passes</a>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <h2 class="pagetitle">Attractions</h2>
+        <h2 class="pagetitle">Attractions</h2>
 
-    <!-- Slider for ride height -->
-    <!-- Filters attractions by height input taken from visitor -->
-    <!-- Slider for metric system -->
-    <div class="slider-metric" style="display:block" id="slider-metric">
-        <p>Filter by minimum height: </p>
-        <input type="range" id="metric-height" name="metric-height" list="tickmarks" min="90" max="150">
-        <datalist id="metric-tickmarks">
-            <option value="90" label="90 cm"></option>
-            <option value="95"></option>
-            <option value="100" label="100 cm"></option>
-            <option value="105"></option>
-            <option value="110" label="110 cm"></option>
-            <option value="115"></option>
-            <option value="120" label="120 cm"></option>
-            <option value="125"></option>
-            <option value="130" label="130 cm"></option>
-            <option value="135"></option>
-            <option value="140" label="140 cm"></option>
-            <option value="145"></option>
-            <option value="150" label='150 cm+'></option>
-        </datalist>
-    </div>
-    <!-- Slider for imperial system -->
-    <div class="slider-imperial" style="display:none">
-        <p>Filter by minimum height: </p>
-        <input type="range" id="us-height" name="us-height" list="tickmarks" min="91" max="152">
-        <datalist id="us-tickmarks">
-            <option value="91" label='3&#39;'></option>
-            <option value="95"></option>
-            <option value="100" label='3&#39;4"'></option>
-            <option value="105"></option>
-            <option value="110" label='3&#39;8"'></option>
-            <option value="115"></option>
-            <option value="120" label='4&#39;'></option>
-            <option value="125"></option>
-            <option value="130" label='4&#39;4"'></option>
-            <option value="135"></option>
-            <option value="140" label='4&#39;8"'></option>
-            <option value="145"></option>
-            <option value="152" label='5&#39;+'></option>
-        </datalist>
-    </div>
-    <!-- Script for switching between metric/imperial based on browser language -->
-    <script>
-        const lang = navigator.language;
-        if (/^en-US\b/.test(lang)) {
-            document.getElementById("slider-imperial").style.display = "block";
-            document.getElementById("slider-metric").style.display = "none";
-        }
+        <!-- Slider for ride height -->
+        <!-- Filters attractions by height input taken from visitor -->
+        <!-- Browser language test to switch between imperial & metric units -->
 
-    </script>
-
-    <div class="container" id="attractions">
-        <div class="attraction" id="at1">
-            <!-- Name of attraction, image of attraction and a brief description-->
-            <h3>Name of Attraction 1</h3>
-            <!-- The source of this image is: Photo by <a href="https://unsplash.com/@ianplaytheworld?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ian Romie Ona</a> on <a href="https://unsplash.com/s/photos/roller-coaster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
-            <img src="/assets/attraction_1.jpg" alt="Patrons stroll through park with roller coasters in background">
-            <!-- Description that will make the customer more likely to buy a ticket-->
-            <p>Ride our adrenaline-filled coaster experience with a breathtaking aerial view of the park. An unmissable experience!</p>
+        <!-- Slider for metric system -->
+        <div class="sliderMetric" id="sliderMetric" style="display: block">
+            <p>Filter by minimum height:</p>
+            <input
+                type="range"
+                id="metricHeight"
+                name="metricHeight"
+                list="metricTickmarks"
+                min="90"
+                max="150"
+                step="2.5"
+                value="110"
+                oninput="result.value=metricHeight.value"
+            />
+            <output id="result" name="result" for="metricHeight">100 </output> cm
+            <datalist id="metricTickmarks">
+                <option value="90" label="90"></option>
+                <option value="95"></option>
+                <option value="100"></option>
+                <option value="105"></option>
+                <option value="110" label="110"></option>
+                <option value="115"></option>
+                <option value="120"></option>
+                <option value="125"></option>
+                <option value="130" label="130"></option>
+                <option value="135"></option>
+                <option value="140"></option>
+                <option value="145"></option>
+                <option value="150" label="150+"></option>
+            </datalist>
         </div>
 
-        <div class="attraction" id="at2">
-            <!-- Name of attraction, image of attraction and a brief description-->
-            <h3>Name of Attraction 2</h3>
-            <!-- The source of this image is: Photo by <a href="https://unsplash.com/@srd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Steve Doig</a> on <a href="https://unsplash.com/s/photos/roller-coaster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
-            <img src="/assets/attraction_2.jpg" alt="Swinging, spinning arm ride named Niro">
-            <!-- Description that will make the customer more likely to buy a ticket-->
-            <p>An exhilarating ride featuring state of the art technology to take you higher and faster than ever before!</p>
+        <!-- Slider for imperial system -->
+        <div class="sliderImperial" id="sliderImperial" style="display: none">
+            <p>Filter by minimum height:</p>
+            <input
+                type="range"
+                id="usHeight"
+                name="usHeight"
+                list="usTickmarks"
+                min="92"
+                max="153"
+                value="122.5"
+                oninput="usResult.value=`${Math.floor(usHeight.value/30.48)}' ${Math.floor(usHeight.value/2.54)%12}`"
+            />
+            <output id="usResult" name="usResult" for="usHeight">4&#39; 0</output>&#8220;
+            <datalist id="usTickmarks">
+                <option value="92" label="3&#39;"></option>
+                <option value="100" label='3&#39;4"'></option>
+                <option value="110" label='3&#39;8"'></option>
+                <option value="120" label="4&#39;"></option>
+                <option value="130" label='4&#39;4"'></option>
+                <option value="140" label='4&#39;8"'></option>
+                <option value="153" label="5&#39;+"></option>
+            </datalist>
         </div>
 
-        <div class="attraction" id="at3">
-            <!-- Name of attraction, image of attraction and a brief description-->
-            <h3>Virtual Reality Attraction 3</h3>
-            <!-- The source of this image is: Photo by <a href="https://unsplash.com/@sorkin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">stephan sorkin</a> on <a href="https://unsplash.com/s/photos/virtual-reality?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
-            <img src="/assets/attraction_3.jpg" alt="Patron enjoying virtual reality experience">
-            <!-- Description that will make the customer more likely to buy a ticket-->
-            <p>Choose one of our many virtual reality games to play singleplayer or with friends. Play your favourite first person shooter games with all-new VR technology. </p>
+        <!-- Script for switching between metric/imperial based on browser language -->
+        <script>
+            const lang = navigator.language;
+            if (/^en-US\b/.test(lang)) {
+                document.getElementById("sliderImperial").style.display =
+                    "block";
+                document.getElementById("sliderMetric").style.display = "none";
+            }
+        </script>
+
+        <div class="container" id="attractions">
+            <div class="attraction" id="at1">
+                <!-- Name of attraction, image of attraction and a brief description-->
+                <h3>Name of Attraction 1</h3>
+                <!-- The source of this image is: Photo by <a href="https://unsplash.com/@ianplaytheworld?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ian Romie Ona</a> on <a href="https://unsplash.com/s/photos/roller-coaster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+                <img
+                    src="/assets/attraction_1.jpg"
+                    alt="Patrons stroll through park with roller coasters in background"
+                />
+                <!-- Description that will make the customer more likely to buy a ticket-->
+                <p>
+                    Ride our adrenaline-filled coaster experience with a
+                    breathtaking aerial view of the park. An unmissable
+                    experience!
+                </p>
+            </div>
+
+            <div class="attraction" id="at2">
+                <!-- Name of attraction, image of attraction and a brief description-->
+                <h3>Name of Attraction 2</h3>
+                <!-- The source of this image is: Photo by <a href="https://unsplash.com/@srd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Steve Doig</a> on <a href="https://unsplash.com/s/photos/roller-coaster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+                <img
+                    src="/assets/attraction_2.jpg"
+                    alt="Swinging, spinning arm ride named Niro"
+                />
+                <!-- Description that will make the customer more likely to buy a ticket-->
+                <p>
+                    An exhilarating ride featuring state of the art technology
+                    to take you higher and faster than ever before!
+                </p>
+            </div>
+
+            <div class="attraction" id="at3">
+                <!-- Name of attraction, image of attraction and a brief description-->
+                <h3>Virtual Reality Attraction 3</h3>
+                <!-- The source of this image is: Photo by <a href="https://unsplash.com/@sorkin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">stephan sorkin</a> on <a href="https://unsplash.com/s/photos/virtual-reality?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+                <img
+                    src="/assets/attraction_3.jpg"
+                    alt="Patron enjoying virtual reality experience"
+                />
+                <!-- Description that will make the customer more likely to buy a ticket-->
+                <p>
+                    Choose one of our many virtual reality games to play
+                    singleplayer or with friends. Play your favourite first
+                    person shooter games with all-new VR technology.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <footer class="footer">
-        <div class="container" id="footer-data-container">
+        <footer class="footer">
+            <div class="container" id="footer-data-container">
+                <!-- h tags shall be converted into a tags if we create the pages -->
 
-            <!-- h tags shall be converted into a tags if we create the pages -->
-
-            <div class="col" id="footer-col-1">
-                <h4>My Account</h4>
-                <h6>Sign In</h6>
-                <h6>Register</h6>
+                <div class="col" id="footer-col-1">
+                    <h4>My Account</h4>
+                    <h6>Sign In</h6>
+                    <h6>Register</h6>
+                </div>
+                <div class="col" id="footer-col-2">
+                    <h4>Our Story</h4>
+                    <h6>Media</h6>
+                    <h6>About Us</h6>
+                </div>
+                <div class="col" id="footer-col-3">
+                    <h4>Legal</h4>
+                    <h6>Terms of Use</h6>
+                    <h6>Privacy Policy</h6>
+                </div>
+                <div class="col" id="footer-col-social">
+                    <a href=""
+                        ><img
+                            src="/assets/f_logo.png"
+                            alt="facebook logo"
+                            height="50"
+                            width="50"
+                    /></a>
+                    <a href=""
+                        ><img
+                            src="/assets/ig_logo.png"
+                            alt="instagram logo"
+                            height="50"
+                            width="50"
+                    /></a>
+                    <a href=""
+                        ><img
+                            src="/assets/t_logo.png"
+                            alt="twitter logo"
+                            height="50"
+                            width="50"
+                    /></a>
+                </div>
             </div>
-            <div class="col" id="footer-col-2">
-                <h4>Our Story</h4>
-                <h6>Media</h6>
-                <h6>About Us</h6>
-            </div>
-            <div class="col" id="footer-col-3">
-                <h4>Legal</h4>
-                <h6>Terms of Use</h6>
-                <h6>Privacy Policy</h6>
-            </div>
-            <div class="col" id="footer-col-social">
-                <a href=""><img src="/assets/f_logo.png" alt="facebook logo" height=50 width=50></a>
-                <a href=""><img src="/assets/ig_logo.png" alt="instagram logo" height=50 width=50></a>
-                <a href=""><img src="/assets/t_logo.png" alt="twitter logo" height=50 width=50></a>
-            </div>
-        </div>
-    </footer>
-</body>
-
+        </footer>
+    </body>
 </html>

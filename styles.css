@@ -1,13 +1,15 @@
 html {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
 p {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
 
-.button, .dropbtn, .btnpurchase {
-    background-color: #E67235;
+.button,
+.dropbtn,
+.btnpurchase {
+    background-color: #e67235;
     color: black;
     padding: 10px 10px;
     text-decoration: none;
@@ -15,11 +17,38 @@ p {
     text-align: center;
     border: 2px solid black;
     border-radius: 15px/30px;
-    box-shadow:
-        0 2px 1px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
     font-weight: bold;
 }
 
 .button:hover {
     background-color: #d96c32;
+}
+
+.sliderMetric,
+.sliderImperial {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type="range"]{
+    cursor: pointer;
+    width: 50%;
+}
+
+datalist{
+    font-family: "Ubuntu", sans-serif;
+    font-size:x-small;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6px;
+    margin-top: -40px;
+    width: 50%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #D22D16;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
