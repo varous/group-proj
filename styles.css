@@ -49,15 +49,19 @@ datalist{
 input[type="range"]::-webkit-slider-runnable-track {
     background: #FCE786;
     border-radius: 5px;
-    border: 1px solid #000000;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 5px outset #FCE786;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0c0c0c;
 }
 
 input[type=range]::-webkit-slider-thumb {
-  border: 4px double #000000;
+  border: 2px outset #a22211;
   height: 16px;
   width: 20px;
   border-radius: 85%;
   background: #D22D16;
   -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track:hover {
+    background: #fbdd56;
 }
