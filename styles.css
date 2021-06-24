@@ -6,6 +6,10 @@ p {
     font-family: "Ubuntu", sans-serif;
 }
 
+.attraction {
+    display: grid;
+}
+
 .button,
 .dropbtn,
 .btnpurchase {
