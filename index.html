@@ -11,41 +11,46 @@
   <meta name="description"
     content="This is a website about an imaginary Computer-Science-themed amusement park with multiple pages describing rides, tickets, and bookings.">
   <meta name="keywords" content="Amusement Park, Computer Science, CS Park">
-  <link rel="stylesheet" href="/styles.css" type="text/css">
+  <link rel="stylesheet" href="styles/styles.css" type="text/css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
   <title>CS Park</title>
   <!-- jquery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  
 </head>
 
 <body>
   <!-- Header that includes links to other pages. This may be copied and pasted in other pages. -->
   <header class="header">
-    <div class="container" id="header-data-container">
-      <div id="logo">
-        <!--Image tag for the logo, which is a link to index.html-->
-        <a href="/index.html">Logo</a>
+    <div id = 'header-data-container'>
+        <!-- Container includes links for hours, attractions, ticketing -->
+      <div id = "logo-container">
+        <div id="logo">
+          <!--Image tag for the logo, which is a link to index.html-->
+          <a href="/index.html">Logo</a>
+        </div>
       </div>
-      <!-- Container includes links for hours, attractions, ticketing -->
-      <div class="headerbutton" id="hoursbutton">
-        <a class="button" href="/hours.html">Hours</a>
+      <div id="navbar-container">
+        <div class="headerbutton" id="hoursbutton">
+          <a class="button" href="/hours.html">Hours</a>
+        </div>
+        <div class="headerbutton" id="explorebutton">
+          <a class="button" href="/attractions.html">Explore</a>
+        </div>
+          <div class="headerbutton" id="ticketsbutton">
+          <a class="button" href="/ticketing.html">Bookings</a>
+        </div>
       </div>
-      <div class="headerbutton" id="explorebutton">
-        <a class="button" href="/attractions.html">Explore</a>
-      </div>
-        <div class="headerbutton" id="ticketsbutton">
-        <a class="button" href="/ticketing.html">Bookings</a>
     </div>
   </header>
     
 <!--div class section1 containing a slideshow of some park images, information about the park, and a link to booking-->
-<div class="Sec1">
+<div class="sec" id = "sec1">
           <!-- Image carousel/slide show -->
   <div class="slideshow-container">
     <!-- Images with number and caption text -->
-    <div class="slides">
+    <div class="slides fade">
       <div class="slide-number">1 / 3</div>
       <img src="/assets/indexImages/index_slideshow_1.jpg" 
            alt= "Image of theme park in the daytime"
@@ -53,7 +58,7 @@
       <div class="text">CS Park</div>
     </div>
 
-    <div class="slides">
+    <div class="slides fade">
       <div class="slide-number">2 / 3</div>
       <img src="/assets/indexImages/index_slideshow_2.jpg"
            alt="Image of theme park at night"
@@ -61,7 +66,7 @@
       <div class="text">CS Park</div>
     </div>
 
-    <div class="slides">
+    <div class="slides fade">
       <div class="slide-number">3 / 3</div>
       <img src="/assets/indexImages/index_slideshow_3.jpg" 
            alt = "Image of theme park"
@@ -70,8 +75,17 @@
       </div>
 
     <!-- Slide navigation buttons -->
-    <a class="prev" onclick=""></a>
-    <a class="next" onclick=""></a>
+    <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+    <a class="next" onclick="nextSlide(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- Dots indicating current slide -->
+  <div class = 'dots-container'>
+    <splan class = 'circle' onclick="thisSlide(1)"></splan>
+    <splan class = 'circle' onclick="thisSlide(2)"></splan>
+    <splan class = 'circle' onclick="thisSlide(3)"></splan>
+    
   </div>
     <!--Contains some information about the park, embedded links to attractions and booking-->   
         <div class="sec1_about">  
@@ -85,7 +99,7 @@
 </div>
       
 <!-- Div class section2 containing 2 images for fractal land, about text, link to booking-->
-<div class="Sec2">
+<div class= "sec" id = "sec2">
         <!-- Image of fractal model and fractal mirror -->
         <div class="Fractal_Land_Images">
             <img src="/assets/attractions/fractalModels_fractal_land.jpeg" 
@@ -109,7 +123,7 @@
 </div>
       
 <!-- Div class section3 containing 4 images of the CS history museum and meet the stars attractions, about text, and a link to booking-->
-  <div class="Sec3"> 
+  <div class="sec" id = "sec3"> 
       <!-- Images of museum & meet the stars -->
       <div class="Museum_Stars_Images">
           
@@ -137,7 +151,7 @@
         </div>
 </div>    
  <!-- Div class section4 containing an image of the theme park, some text about COVID protocols, a link to learn more about COVID protocols -->
-<div class="sec4">
+<div class="sec" id = "sec4">
     <!-- Image of people walking around CS Park -->
     <div class="covid_img">
        <img src="/assets/attractions/themepark_covid.jpg"
@@ -200,7 +214,7 @@
       </div>
     </div>
   </footer>
-
+<script src = 'js/slideShow.js'></script>
 </body>
 
 </html>
