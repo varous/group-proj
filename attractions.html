@@ -15,14 +15,14 @@
             name="keywords"
             content="Amusement Park, Computer Science, CS Park, Attractions"
         />
-        <!--will fill out base href once i understand directory structure of project-->
-        <base href="" target="_blank" />
+
         <link rel="stylesheet" href="/styles.css" type="text/css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
             href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Ubuntu:wght@300&display=swap"
             rel="stylesheet"
         />
+        <script src="slider.js"></script> 
         <title>CS Park Attractions</title>
     </head>
 
@@ -66,7 +66,7 @@
         <!-- Browser language test to switch between imperial & metric units -->
 
         <!-- Slider for metric system -->
-        <div class="sliderMetric" id="sliderMetric" style="display: block">
+        <div class="sliderMetric" id="sliderMetric" style="display: flex">
             <p>Filter by minimum height:</p>
             <input
                 type="range"
@@ -77,9 +77,11 @@
                 max="150"
                 step="2.5"
                 value="110"
-                oninput="result.value=metricHeight.value"
+                oninput="result.value=metricHeight.value;
+                slideAction(metricHeight.value)"
             />
             <output id="result" name="result" for="metricHeight">100 </output> cm
+
             <datalist id="metricTickmarks">
                 <option value="90" label="90"></option>
                 <option value="95"></option>
@@ -108,9 +110,12 @@
                 min="92"
                 max="153"
                 value="122.5"
-                oninput="usResult.value=`${Math.floor(usHeight.value/30.48)}' ${Math.floor(usHeight.value/2.54)%12}`"
+                oninput="usResult.value=`${Math.floor(usHeight.value/30.48)}' ${Math.floor(usHeight.value/2.54)%12}`;
+                slideAction(usHeight.value)"
             />
-            <output id="usResult" name="usResult" for="usHeight">4&#39; 0</output>&#8220;
+            <output id="usResult" name="usResult" for="usHeight"
+                >4&#39; 0</output
+            >&#8220;
             <datalist id="usTickmarks">
                 <option value="92" label="3&#39;"></option>
                 <option value="100" label='3&#39;4"'></option>
@@ -132,44 +137,60 @@
             }
         </script>
 
+        <br>
+
         <div class="container" id="attractions">
-            <div class="attraction" id="at1">
+            <div class="attraction" id="at1" style="display: grid">
                 <!-- Name of attraction, image of attraction and a brief description-->
-                <h3>Name of Attraction 1</h3>
-                <!-- The source of this image is: Photo by <a href="https://unsplash.com/@ianplaytheworld?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ian Romie Ona</a> on <a href="https://unsplash.com/s/photos/roller-coaster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+                <h3>Fractal Land</h3>
+
                 <img
-                    src="/assets/attraction_1.jpg"
-                    alt="Patrons stroll through park with roller coasters in background"
+                    src="/assets/attractions/fractalModels_fractal_land.jpeg"
+                    alt="Image of the output of a person's mirror reflection distorted using fractals"
                 />
-                <!-- Description that will make the customer more likely to buy a ticket-->
+
+                <p><em>Experience an ever-changing gallery</em></p>
                 <p>
-                    Ride our adrenaline-filled coaster experience with a
-                    breathtaking aerial view of the park. An unmissable
-                    experience!
+                    Fractals are complex patterns characterized by repeated
+                    simple processes that repeat an infinite number of times.
+                    Here, we harness this concept to provide a spectacle of
+                    constantly evolving art.
+                </p>
+
+                <p>
+                    Immerse yourself in these works using our fractal mirror,
+                    which uses your own reflection to create a one of a kind art
+                    piece to treasure.
                 </p>
             </div>
 
-            <div class="attraction" id="at2">
-                <!-- Name of attraction, image of attraction and a brief description-->
-                <h3>Name of Attraction 2</h3>
-                <!-- The source of this image is: Photo by <a href="https://unsplash.com/@srd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Steve Doig</a> on <a href="https://unsplash.com/s/photos/roller-coaster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+            <div class="attraction" id="at2" style="display: grid">
+                <h3>Museum and Meet the Stars!</h3
+                >
                 <img
-                    src="/assets/attraction_2.jpg"
-                    alt="Swinging, spinning arm ride named Niro"
+                    src="/assets/attractions/lispMachine_cs_history.jpeg"
+                    alt="An image of a lisp machine"
                 />
-                <!-- Description that will make the customer more likely to buy a ticket-->
+
                 <p>
-                    An exhilarating ride featuring state of the art technology
-                    to take you higher and faster than ever before!
+                    Take a tour through the Museum of Computer Science History.
+                    This is home to many of the invaluable inventions that
+                    pioneered the development of computers and the way we use
+                    technology today.
+                </p>
+                <p>
+                    As part of our tour, we invite guests to come meet the stars
+                    of technology- Spend time with some of the legendary
+                    machines from pop culture, including C-3PO, R2-D2, WALL-E,
+                    HAL 9000 and more!
                 </p>
             </div>
 
-            <div class="attraction" id="at3">
+            <div class="attraction" id="at3" style="display: grid">
                 <!-- Name of attraction, image of attraction and a brief description-->
-                <h3>Virtual Reality Attraction 3</h3>
-                <!-- The source of this image is: Photo by <a href="https://unsplash.com/@sorkin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">stephan sorkin</a> on <a href="https://unsplash.com/s/photos/virtual-reality?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+                <h3>Virtual Reality</h3>
                 <img
-                    src="/assets/attraction_3.jpg"
+                    src="/assets/attractions/vr_immerse_2.jpeg"
                     alt="Patron enjoying virtual reality experience"
                 />
                 <!-- Description that will make the customer more likely to buy a ticket-->
@@ -180,6 +201,7 @@
                 </p>
             </div>
         </div>
+
 
         <footer class="footer">
             <div class="container" id="footer-data-container">
