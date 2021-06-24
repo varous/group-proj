@@ -1,47 +1,220 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="robots" content="all">
-        <meta name="creator" content="cm1040 Team 56">
-        <meta name="audience" content="cm1040 students">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This is a website about an imaginary Computer-Science-themed amusement park with multiple pages describing rides, tickets, etc.">
-        <meta name="keywords" content="Amusement Park, Computer Science, CS Park">
-        <!--will fill out base href once i understand directory structure of project-->
-        <base href="" target="_blank">
-        <title>CS Park</title>
-    </head>
-    <body>
-        
-        <footer class = "footer">
-    <div class = "container" id = "footer-data-container"></div>
-        
-    <!-- h tags shall be converted into a tags if we create the pages -->
+<html lang="en">
 
-        <div class = "col" id = "footer-col-1">
-            <h4>My Account</h4>
-            <h6>Sign In</h6>
-            <h6>Register</h6>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all">
+  <meta name="creator" content="cm1040 Team 56">
+  <meta name="audience" content="cm1040 students">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="This is a website about an imaginary Computer-Science-themed amusement park with multiple pages describing rides, tickets, and bookings.">
+  <meta name="keywords" content="Amusement Park, Computer Science, CS Park">
+  <link rel="stylesheet" href="styles/styles.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <title>CS Park</title>
+  <!-- jquery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+</head>
+
+<body>
+  <!-- Header that includes links to other pages. This may be copied and pasted in other pages. -->
+  <header class="header">
+    <div id = 'header-data-container'>
+        <!-- Container includes links for hours, attractions, ticketing -->
+      <div id = "logo-container">
+        <div id="logo">
+          <!--Image tag for the logo, which is a link to index.html-->
+          <a href="/index.html">Logo</a>
         </div>
-        <div class = "col" id = "footer-col-2">
-            <h4>Our Story</h4>
-            <h6>Media</h6>
-            <h6>About Us</h6>
+      </div>
+      <div id="navbar-container">
+        <div class="headerbutton" id="hoursbutton">
+          <a class="button" href="/hours.html">Hours</a>
         </div>
-        <div class = "col" id = "footer-col-3">
-            <h4>Legal</h4>
-            <h6>Terms of Use</h6>
-            <h6>Privacy Policy</h6>
+        <div class="headerbutton" id="explorebutton">
+          <a class="button" href="/attractions.html">Explore</a>
         </div>
-        <div class = "col" id = "footer-col-social">
-            <img src = "/assets/f_logo.png" href = "" alt = "facebook logo" height = 50 width = 50>
-            <img src = "/assets/ig_logo.png" href = "" alt = "instagram logo" height = 50 width = 50>
-            <img src = "/assets/t_logo.png" href = "" alt = "twitter logo" height = 50 width = 50>
+          <div class="headerbutton" id="ticketsbutton">
+          <a class="button" href="/ticketing.html">Bookings</a>
         </div>
+      </div>
     </div>
-</footer>
+  </header>
     
-    </body>
+<!--div class section1 containing a slideshow of some park images, information about the park, and a link to booking-->
+<div class="sec" id = "sec1">
+          <!-- Image carousel/slide show -->
+  <div class="slideshow-container">
+    <!-- Images with number and caption text -->
+    <div class="slides fade">
+      <div class="slide-number">1 / 3</div>
+      <img src="/assets/indexImages/index_slideshow_1.jpg" 
+           alt= "Image of theme park in the daytime"
+           style="width:100%">
+      <div class="text">CS Park</div>
+    </div>
+
+    <div class="slides fade">
+      <div class="slide-number">2 / 3</div>
+      <img src="/assets/indexImages/index_slideshow_2.jpg"
+           alt="Image of theme park at night"
+           style="width:100%">
+      <div class="text">CS Park</div>
+    </div>
+
+    <div class="slides fade">
+      <div class="slide-number">3 / 3</div>
+      <img src="/assets/indexImages/index_slideshow_3.jpg" 
+           alt = "Image of theme park"
+           style="width:100%">
+      <div class="text">CS Park</div>
+      </div>
+
+    <!-- Slide navigation buttons -->
+    <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+    <a class="next" onclick="nextSlide(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- Dots indicating current slide -->
+  <div class = 'dots-container'>
+    <splan class = 'circle' onclick="thisSlide(1)"></splan>
+    <splan class = 'circle' onclick="thisSlide(2)"></splan>
+    <splan class = 'circle' onclick="thisSlide(3)"></splan>
+    
+  </div>
+    <!--Contains some information about the park, embedded links to attractions and booking-->   
+        <div class="sec1_about">  
+            <h3>The CS Park</h3>
+            <p>Welcome to the Computer Science Theme Park! Hosting traditional <a href="/attractions.html">amusement park rides</a> for all the thrill lovers out there along with historical and educational attractions, there is something here for everyone! With such a variety of features, we are truly the first of our kind. Please take a tour through our extensive array of activities and make sure to <a href="/ticketing.html">book tickets</a> in advance!</p>   
+       </div>
+    <!--Button for booking tickets -->
+        <div class="sec1button" id="ticketsbutton">
+        <a class="button" href="/ticketing.html">Book tickets now!</a>
+        </div> 
+</div>
+      
+<!-- Div class section2 containing 2 images for fractal land, about text, link to booking-->
+<div class= "sec" id = "sec2">
+        <!-- Image of fractal model and fractal mirror -->
+        <div class="Fractal_Land_Images">
+            <img src="/assets/attractions/fractalModels_fractal_land.jpeg" 
+             alt="Image of computer generated fractal model">
+        
+            <img src="/assets/attractions/fractalMirror_fractal_land.jpeg"
+             alt="Image of the output of a person's mirror reflection distorted using fractals">
+        </div>
+    <!-- Some information about fractal land-->
+        <div class="sec2_about">
+        <h3>Fractal Land</h3>
+            <p><em>Experience an ever-changing gallery</em></p>
+            <p>Fractals are complex patterns characterized by repeated simple processes that repeat an infinite number of times. Here, we harness this concept to provide a spectacle of constantly evolving art.</p> 
+            
+        <p>Immerse yourself in these works using our fractal mirror, which uses your own reflection to create a one of a kind art piece to treasure.</p>
+        </div>
+    <!--Button for booking tickets -->  
+         <div class="sec1button" id="ticketsbutton">
+         <a class="button" href="/ticketing.html">Book tickets now!</a>   
+        </div>
+</div>
+      
+<!-- Div class section3 containing 4 images of the CS history museum and meet the stars attractions, about text, and a link to booking-->
+  <div class="sec" id = "sec3"> 
+      <!-- Images of museum & meet the stars -->
+      <div class="Museum_Stars_Images">
+          
+        <img src="/assets/attractions/lispMachine_cs_history.jpeg"
+             alt="An image of a lisp machine">
+          
+        <img src="/assets/attractions/univac_cs_history.jpeg"
+             alt="An image of a UNIVAC">
+          
+        <img src="hortonTypeWriter_cs_history.jpeg"
+             alt="An image of a Horton typewriter">
+          
+        <img src="/assets/attractions/r2d2C3po_celebrity_machines.jpeg"
+             alt="An image of R2-D2 and C-3PO from Star Wars">
+      </div>
+      <!-- Some information about the CS Museum and meet the stars -->
+      <div class="sec3_about">
+        <h3>Museum and Meet the Stars!</h3>
+          <p>Take a tour through the Museum of Computer Science History. This is home to many of the invaluable inventions that pioneered the development of computers and the way we use technology today.</p>
+          <p>As part of our tour, we invite guests to come meet the stars of technology- Spend time with some of the legendary machines from pop culture, including C-3PO, R2-D2, WALL-E, HAL 9000 and more!</p>
+      </div>
+   <!-- Button for booking tickets-->
+       <div class="sec1button" id="ticketsbutton">
+         <a class="button" href="/ticketing.html">Book tickets now!</a>   
+        </div>
+</div>    
+ <!-- Div class section4 containing an image of the theme park, some text about COVID protocols, a link to learn more about COVID protocols -->
+<div class="sec" id = "sec4">
+    <!-- Image of people walking around CS Park -->
+    <div class="covid_img">
+       <img src="/assets/attractions/themepark_covid.jpg"
+            alt="An image of people walkign around a theme park">
+     </div>
+    <!-- COVID safety guidelines that we are implementing in the park-->
+      <div class="sec4_about">
+      <h3>COVID Safety</h3>
+          <p>We are committed to upholding all COVID-19 safety guidlines for the protection of our guests. All staff are required to wear face masks and disposable gloves at all times. We invite our guests to do the same.A small bottle of hand sanitizer also is provided to all guests upon entry. Addiontally, there are hand sanitization stations set up at several areas around the park.</p>
+      </div>
+    <!-- A button to learn more about covid safety guidelines-->
+    <div class="sec4button" id="covidbutton">
+         <a class="button" href="/COVID.html">Learn more about COVID safety</a>   
+        </div>
+    <!--A link to FAQs -->
+    <div class="faqbutton" id="faqbutton">
+      <a class="button" href="/faq.html">FAQs</a>
+    </div>
+</div>
+    
+  <br>
+
+  <!-- Container for attraction tabs -->
+  <div class="attraction-container">
+    <!-- May include images, to be added later -->
+    <div class="flagship-attraction" id="container1">
+      <h4>Flagship Attraction</h4>
+    </div>
+    <div class="flagship-attraction" id="container2">
+      <h4>Season Passes</h4>
+    </div>
+    <div class="flagship-attraction" id="container3">
+      <h4>Special Offers</h4>
+    </div>
+  </div>
+
+  <!-- Container for footer -->
+  <footer class="footer">
+    <div class="container" id="footer-data-container">
+      <!-- h tags shall be converted into a tags if we create the pages -->
+      <div class="col" id="footer-col-1">
+        <h4>My Account</h4>
+        <h6>Sign In</h6>
+        <h6>Register</h6>
+      </div>
+      <div class="col" id="footer-col-2">
+        <h4>Our Story</h4>
+        <h6>Media</h6>
+        <h6>About Us</h6>
+      </div>
+      <div class="col" id="footer-col-3">
+        <h4>Legal</h4>
+        <h6>Terms of Use</h6>
+        <h6>Privacy Policy</h6>
+      </div>
+      <div class="col" id="footer-col-social">
+        <a href=""><img src="/assets/f_logo.png" alt="facebook logo" height=50 width=50></a>
+        <a href=""><img src="/assets/ig_logo.png" alt="instagram logo" height=50 width=50></a>
+        <a href=""><img src="/assets/t_logo.png" alt="twitter logo" height=50 width=50></a>
+      </div>
+    </div>
+  </footer>
+<script src = 'js/slideShow.js'></script>
+</body>
+
 </html>

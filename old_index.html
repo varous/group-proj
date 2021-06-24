@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all">
+  <meta name="creator" content="cm1040 Team 56">
+  <meta name="audience" content="cm1040 students">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="This is a website about an imaginary Computer-Science-themed amusement park with multiple pages describing rides, tickets, etc.">
+  <meta name="keywords" content="Amusement Park, Computer Science, CS Park">
+  <link rel="stylesheet" href="/styles.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <title>CS Park</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header that includes links to other pages. This may be copied and pasted in other pages. -->
+  <header class="header">
+    <div class="container" id="header-data-container">
+      <div id="logo">
+        <!--Image tag for the logo, which is a link to index.html-->
+        <a href="/index.html">Logo</a>
+      </div>
+      <!-- Container for table that shows business hours -->
+      <div id="Hours">
+        <table id="opening-hours">
+          <tr>
+            <th><b>Monday to Friday</b></th>
+            <td>9am - 7pm</td>
+          </tr>
+          <tr>
+            <th><b>Saturday and Sunday</b></th>
+            <td>9am - 9pm</td>
+          </tr>
+        </table>
+      </div>
+      <!-- Container includes links to attractions page and ticketing page -->
+      <div class="headerbutton" id="explorebutton">
+        <a class="button" href="/attractions.html">Explore Attractions</a>
+      </div>
+      <div class="headerbutton" id="ticketsbutton">
+        <a class="button" href="/ticketing.html">Tickets/Passes</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Image carousel/slide show -->
+  <div class="slideshow-container">
+    <!-- Images with number and caption text -->
+    <div class="slides">
+      <div class="slide-number">1 / 3</div>
+      <img src="" style="width:100%">
+      <div class="text">Caption One</div>
+    </div>
+
+    <div class="slides">
+      <div class="slide-number">2 / 3</div>
+      <img src="" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="slides">
+      <div class="slide-number">3 / 3</div>
+      <img src="" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
+    <!-- Slide navigation buttons -->
+    <a class="prev" onclick=""></a>
+    <a class="next" onclick=""></a>
+  </div>
+
+  <br>
+
+  <!-- Container for attraction tabs -->
+  <div class="attraction-container">
+    <!-- May include images, to be added later -->
+    <div class="flagship-attraction" id="container1">
+      <h4>Flagship Attraction</h4>
+    </div>
+    <div class="flagship-attraction" id="container2">
+      <h4>Season Passes</h4>
+    </div>
+    <div class="flagship-attraction" id="container3">
+      <h4>Special Offers</h4>
+    </div>
+  </div>
+
+  <!-- Container for footer -->
+  <footer class="footer">
+    <div class="container" id="footer-data-container">
+      <!-- h tags shall be converted into a tags if we create the pages -->
+      <div class="col" id="footer-col-1">
+        <h4>My Account</h4>
+        <h6>Sign In</h6>
+        <h6>Register</h6>
+      </div>
+      <div class="col" id="footer-col-2">
+        <h4>Our Story</h4>
+        <h6>Media</h6>
+        <h6>About Us</h6>
+      </div>
+      <div class="col" id="footer-col-3">
+        <h4>Legal</h4>
+        <h6>Terms of Use</h6>
+        <h6>Privacy Policy</h6>
+      </div>
+      <div class="col" id="footer-col-social">
+        <a href=""><img src="/assets/f_logo.png" alt="facebook logo" height=50 width=50></a>
+        <a href=""><img src="/assets/ig_logo.png" alt="instagram logo" height=50 width=50></a>
+        <a href=""><img src="/assets/t_logo.png" alt="twitter logo" height=50 width=50></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
